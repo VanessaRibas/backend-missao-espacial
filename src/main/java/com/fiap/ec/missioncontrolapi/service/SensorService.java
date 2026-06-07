@@ -6,7 +6,6 @@ import com.fiap.ec.missioncontrolapi.repository.SensorRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 @Service
 public class SensorService {
 
@@ -23,10 +22,12 @@ public class SensorService {
     public List<Sensor> listar() {
         return repository.findAll();
     }
+
     public Sensor buscarPorId(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Sensor não encontrado"));
     }
+
     public Sensor atualizar(Long id, Sensor atualizado) {
         Sensor existente = buscarPorId(id);
 
@@ -38,7 +39,7 @@ public class SensorService {
     }
 
     public void deletar(Long id) {
-        Sensor dispositivo = buscarPorId(id);
-        repository.delete(dispositivo);
+        Sensor existente = buscarPorId(id);
+        repository.delete(existente);
     }
 }
