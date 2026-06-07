@@ -26,4 +26,8 @@ public class DispositivoEspacialController {
     public List<DispositivoEspacial> listar() {
         return service.listar();
     }
+    @GetMapping("/{id}")
+    public DispositivoEspacial buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
+    }
 }

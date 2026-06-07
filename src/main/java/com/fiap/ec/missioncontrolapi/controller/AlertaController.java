@@ -21,4 +21,8 @@ public class AlertaController {
     public List<Alerta> listar() {
         return service.listar();
     }
+    @GetMapping("/{id}")
+    public Alerta buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
+    }
 }

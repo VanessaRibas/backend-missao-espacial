@@ -1,6 +1,7 @@
 package com.fiap.ec.missioncontrolapi.service;
 
 import com.fiap.ec.missioncontrolapi.model.Alerta;
+import com.fiap.ec.missioncontrolapi.model.DispositivoEspacial;
 import com.fiap.ec.missioncontrolapi.repository.AlertaRepository;
 import org.springframework.stereotype.Service;
 
@@ -21,5 +22,9 @@ public class AlertaService {
 
     public List<Alerta> listar() {
         return repository.findAll();
+    }
+    public Alerta buscarPorId(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Alerta não encontrado"));
     }
 }

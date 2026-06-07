@@ -26,4 +26,8 @@ public class SensorController {
     public List<Sensor> listar() {
         return service.listar();
     }
+    @GetMapping("/{id}")
+    public Sensor buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
+    }
 }

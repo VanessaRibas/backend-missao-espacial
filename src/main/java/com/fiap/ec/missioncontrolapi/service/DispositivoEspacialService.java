@@ -22,4 +22,10 @@ public class DispositivoEspacialService {
     public List<DispositivoEspacial> listar() {
         return repository.findAll();
     }
+
+    public DispositivoEspacial buscarPorId(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Dispositivo Espacial não encontrado"));
+    }
+    
 }
