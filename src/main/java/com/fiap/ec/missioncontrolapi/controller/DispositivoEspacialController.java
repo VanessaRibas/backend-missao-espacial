@@ -30,4 +30,14 @@ public class DispositivoEspacialController {
     public DispositivoEspacial buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
+    @PutMapping("/{id}")
+    public DispositivoEspacial atualizar(@PathVariable Long id,
+                                        @RequestBody DispositivoEspacial dispositivo) {
+        return service.atualizar(id, dispositivo);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id) {
+        service.deletar(id);
+    }
 }

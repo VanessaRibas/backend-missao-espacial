@@ -27,5 +27,19 @@ public class DispositivoEspacialService {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Dispositivo Espacial não encontrado"));
     }
-    
+
+    public DispositivoEspacial atualizar(Long id, DispositivoEspacial atualizado) {
+        DispositivoEspacial existente = buscarPorId(id);
+
+        existente.setNome(atualizado.getNome());
+        existente.setCategoria(atualizado.getCategoria());
+        existente.setStatus(atualizado.getStatus());
+
+        return repository.save(existente);
+    }
+
+    public void deletar(Long id) {
+        DispositivoEspacial dispositivo = buscarPorId(id);
+        repository.delete(dispositivo);
+    }
 }
