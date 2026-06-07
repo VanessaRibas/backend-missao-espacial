@@ -11,7 +11,7 @@ public class Alerta {
     private Long id;
 
     @Column(nullable = false)
-    private String titulo;
+    private String nome;
 
     @Column(nullable = false)
     private String nivel;
@@ -21,16 +21,16 @@ public class Alerta {
 
     public Alerta() {}
 
-    public Alerta(String titulo, String nivel, String mensagem) {
-        this.titulo = titulo;
+    public Alerta(String nome, String nivel, String mensagem) {
+        this.nome = nome;
         this.nivel = nivel;
         this.mensagem = mensagem;}
 
     public Long getId() {return id;}
-    public String getTitulo() {return titulo;}
+    public String getNome() {return nome;}
     public String getNivel() {return nivel;}
     public String getMensagem() {return mensagem;}
-    public void setTitulo(String titulo) {this.titulo = titulo;}
+    public void setNome(String nome) {this.nome = nome;}
     public void setNivel(String nivel) {this.nivel = nivel;}
     public void setMensagem(String mensagem) {this.mensagem = mensagem;}
 }
