@@ -39,5 +39,5 @@ public class DispositivoEspacialController {
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id) {
         service.deletar(id);
-    }
+}
 }

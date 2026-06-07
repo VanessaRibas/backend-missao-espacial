@@ -1,5 +1,4 @@
 package com.fiap.ec.missioncontrolapi.service;
-
 import com.fiap.ec.missioncontrolapi.model.Alerta;
 import com.fiap.ec.missioncontrolapi.model.DispositivoEspacial;
 import com.fiap.ec.missioncontrolapi.model.Sensor;
