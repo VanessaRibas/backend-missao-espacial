@@ -25,6 +25,6 @@ public class SensorService {
     }
     public Sensor buscarPorId(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Alerta não encontrado"));
+                .orElseThrow(() -> new RuntimeException("Sensor não encontrado"));
     }
 }
