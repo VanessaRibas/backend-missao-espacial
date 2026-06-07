@@ -1,5 +1,6 @@
 package com.fiap.ec.missioncontrolapi.controller;
 
+import com.fiap.ec.missioncontrolapi.model.DispositivoEspacial;
 import com.fiap.ec.missioncontrolapi.model.Sensor;
 import com.fiap.ec.missioncontrolapi.service.SensorService;
 import org.springframework.web.bind.annotation.*;
@@ -29,5 +30,15 @@ public class SensorController {
     @GetMapping("/{id}")
     public Sensor buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
+    }
+    @PutMapping("/{id}")
+    public Sensor atualizar(@PathVariable Long id,
+                                        @RequestBody Sensor dispositivo) {
+        return service.atualizar(id, dispositivo);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id) {
+        service.deletar(id);
     }
 }
