@@ -1,0 +1,29 @@
+package com.fiap.ec.missioncontrolapi.controller;
+
+import com.fiap.ec.missioncontrolapi.model.DispositivoEspacial;
+import com.fiap.ec.missioncontrolapi.service.DispositivoEspacialService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/dispositivos")
+@CrossOrigin
+public class DispositivoEspacialController {
+
+    private final DispositivoEspacialService service;
+
+    public DispositivoEspacialController(DispositivoEspacialService service) {
+        this.service = service;
+    }
+
+    @PostMapping
+    public DispositivoEspacial criar(@RequestBody DispositivoEspacial dispositivo) {
+        return service.salvar(dispositivo);
+    }
+
+    @GetMapping
+    public List<DispositivoEspacial> listar() {
+        return service.listar();
+    }
+}
