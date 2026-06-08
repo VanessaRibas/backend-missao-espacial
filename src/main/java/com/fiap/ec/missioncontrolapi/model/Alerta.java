@@ -24,13 +24,38 @@ public class Alerta {
     public Alerta(String nome, String nivel, String mensagem) {
         this.nome = nome;
         this.nivel = nivel;
-        this.mensagem = mensagem;}
+        this.mensagem = mensagem;
+    }
 
-    public Long getId() {return id;}
-    public String getNome() {return nome;}
-    public String getNivel() {return nivel;}
-    public String getMensagem() {return mensagem;}
-    public void setNome(String nome) {this.nome = nome;}
-    public void setNivel(String nivel) {this.nivel = nivel;}
-    public void setMensagem(String mensagem) {this.mensagem = mensagem;}
+    public Long getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getNivel() {
+        return nivel;
+    }
+
+    public String getMensagem() {
+        return mensagem;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
+    }
+
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
+    }
 }

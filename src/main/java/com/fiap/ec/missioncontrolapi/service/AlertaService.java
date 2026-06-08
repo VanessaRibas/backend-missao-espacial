@@ -39,7 +39,6 @@ public class AlertaService {
     }
 
     public void deletar(Long id) {
-        Alerta existente = buscarPorId(id);
-        repository.delete(existente);
+        repository.deleteById(id);
     }
 }
